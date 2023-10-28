@@ -7,7 +7,7 @@
 <body>
     
     {% for i in range(0, col)%}
-    <p><b1><a href="{{ url_for('open_post', post_id=data[i]['id']) }}">{{ data[i]['title'] }}</a></b1></p>
+    <li><h3><a href="{{ url_for('open_post', post_id=data[i]['id']) }}">{{ data[i]['title'] }}</a></h3></li>
     {% endfor %}
 </body>
 </html>
