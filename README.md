@@ -28,10 +28,10 @@ $ python main.py
 ### screenshots
 
 
-![posts](img/img_3.jpg 'posts')
+![posts](img\img_3.jpg 'posts')
 ---
 
 ![rp](img/img_2.jpg "Add post")
 ---
 
-![reding](img/img_1.jpg "reading post")
+![reding](img\img_1.jpg "reading post")
