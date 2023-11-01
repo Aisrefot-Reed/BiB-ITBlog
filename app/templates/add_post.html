@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>add post</title>
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/addpost.css') }}">
+    <!-- <link rel= "stylesheet" type= "text/css" href= "addpost.css"> -->
 </head>
 <body>
+
     <center>
     <div class="textarea_for_adding_post">
+        <p id="header_label">Создание поста</p>
         <form action="" method="POST">
-            <textarea type="text" maxlength="120" id="post_title", name="add_post_title" placeholder="Заголовок" spellcheck="true"></textarea>
-            <textarea  type="text" name="add_post_content" id="post_content" placeholder="Ваш контент =]" spellcheck="true"></textarea>
-            <button id="btn_send" name="btn_send" type="submit" maxlength="20">Далее</button>
+            <textarea type="text" maxlength=120 id="post_title", name="add_post_title" placeholder="Заголовок" spellcheck="true"></textarea>
+            <textarea maxlength=1500 type="text" name="add_post_content" id="post_content" placeholder="Ваш контент =]" spellcheck="true"></textarea>
+            <button id="btn_send" name="btn_send" type="submit" maxlength=20>Опубликовать</button>
         </form>
     </div>
 </center>

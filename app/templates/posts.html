@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <h1><a href="/addpost">Go to AddPost</a></h1>
     
     {% for i in range(0, col)%}
     <li><h3><a href="{{ url_for('open_post', post_id=data[i]['id']) }}">{{ data[i]['title'] }}</a></h3></li>
