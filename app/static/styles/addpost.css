@@ -1,0 +1,79 @@
+
+
+
+body {
+    background-color: rgb(29, 29, 29);
+    background: radial-gradient(rgb(184, 184, 184) 20%, rgb(17, 17, 17));
+}
+textarea {
+    resize: none;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0px 0px 11px 5px rgb(0, 0, 0);
+    color: rgb(224, 224, 224);
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+#post_title {
+
+    padding: 10px;
+    width: 90%;
+    height: 58px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+
+    border: 2px solid rgb(3, 218, 197);
+    border-radius: 2px;
+    font-size: 24px;
+}
+textarea:focus {
+   outline: rgb(24, 24, 24) solid 3px;
+   box-shadow: 2px 2px 10px 10px rgb(0, 0, 0);
+   
+}
+textarea::-webkit-scrollbar {
+    width: 10px;
+  
+}
+textarea::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.705);
+   
+}
+textarea::-webkit-scrollbar-thumb {
+    background-color: rgb(52, 52, 52);
+    border-radius: 10px;
+    border: 3px solid rgb(0, 0, 0);
+}
+
+
+#post_content {
+    padding: 10px;
+    width: 90%;
+    height: 400px;
+    font-size: 18px;
+    margin-bottom: 5px;
+    
+    border: 2px solid rgb(4, 149, 221);
+    border-radius: 2px;
+}
+
+#btn_send {
+    transition-duration: 1s;
+    margin-left: 0%;
+    margin-top: 10px;
+    width: 80%;
+    height: 30px;
+    color: rgb(224, 224, 224);
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0px 0px 11px 5px rgb(0, 0, 0);
+
+    border: 2px solid rgb(86, 176, 12);
+    border-radius: 2px;
+}
+
+#btn_send:hover {
+    color: aliceblue;
+    background-color: rgb(86, 176, 12);
+    box-shadow: 2px 2px 10px 10px rgb(0, 0, 0);
+}

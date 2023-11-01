@@ -12,7 +12,7 @@ def loging():
     if request.method=="POST":
         name = request.form.get("name")
         email = request.form.get("email")
-        return "HEllo привт"
+        return "HEllo"
     return render_template("register.html")
 
 @app.route("/posts")
@@ -37,5 +37,5 @@ def add_post():
     return render_template("add_post.html")
 
 # app.add_url_rule('/', 'index', main_site)
-app.run()
+app.run(debug=True)
 

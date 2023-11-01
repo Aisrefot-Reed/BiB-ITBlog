@@ -1,15 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>add post</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/addpost.css') }}">
 </head>
 <body>
-    <form action="" method="POST">
-        <input type="text" maxlength="10" id="add_post_title", name="add_post_title">
-        <input type="text" maxlength="1000" id="add_post_content" name="add_post_content">
-        <button type="submit">RER</button>
-    </form>
+    <center>
+    <div class="textarea_for_adding_post">
+        <form action="" method="POST">
+            <textarea type="text" maxlength="120" id="post_title", name="add_post_title" placeholder="Заголовок" spellcheck="true"></textarea>
+            <textarea  type="text" name="add_post_content" id="post_content" placeholder="Ваш контент =]" spellcheck="true"></textarea>
+            <button id="btn_send" name="btn_send" type="submit" maxlength="20">Далее</button>
+        </form>
+    </div>
+</center>
+    
+
+
 </body>
 </html>
