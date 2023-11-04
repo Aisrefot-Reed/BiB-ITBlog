@@ -1,0 +1,50 @@
+body {
+    background-color: rgb(20, 20, 20);
+    color: aliceblue;
+    font-family: monospace;
+}
+.post_form {
+    background-color: black;
+    width: 90%;
+    margin: 0px auto;
+    padding: 10px;
+    border: 2px solid rgb(0, 72, 84);
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px 2px rgb(18, 193, 196);
+}
+
+
+
+.post_title {
+    font-size: 23px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+
+.post_text {
+    font-size: 18px;
+    word-wrap: break-word;
+    line-height: 24px;
+}
+ 
+.go_to_posts {
+    transition-duration: 0.5s;
+    text-align: center;
+    width: 60px;
+    color: aliceblue;
+    font-size: 20px; 
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: black;
+    padding: 10px;
+    border-radius: 3px;
+    border: 2px solid rgb(18, 51, 196);
+}
+.go_to_posts:hover {
+    box-shadow: 0px 0px 10px 2px rgb(18, 51, 196);
+}
+.gtp_link {
+    text-decoration: none;
+
+}

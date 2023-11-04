@@ -8,11 +8,10 @@ class DataBase():
     def init_db():
         with sqlite3.connect(database_file) as conn:
             cursor = conn.cursor()
-        cursor.execute("""CREATE TABLE IF NOT EXiSTS Posts (
+        cursor.execute("""CREATE TABLE IF NOT EXISTS Posts (
     post_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
     title   TEXT    NOT NULL,
-    content TEXT    NOT NULL
-                            )""")
+    content TEXT    NOT NULL)""")
     def get_all_posts():
         with sqlite3.connect(database_file) as conn:
             cursor = conn.cursor()
@@ -22,10 +21,11 @@ class DataBase():
         s = []
         for text in all_posts:
             data = {}
-        
+            
+            data['id'] = text[0]
             data['title'] = text[1]
             data['content'] = text[2]
-            data['id'] = text[0]
+
             s.append(data)
 
         return list(reversed(s))
@@ -50,8 +50,8 @@ class DataBase():
 
 
 
-# print(DataBase.opened_post(2))
-# print(DataBase.get_all_posts(10))
+# # print(DataBase.opened_post(2))
+# # print(DataBase.get_all_posts(10))
 # DataBase.init_db()
 
 

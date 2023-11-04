@@ -3,13 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/posts.css') }}">
+    <!-- <link rel= "stylesheet" type= "text/css" href= "posts.css"> -->
+    <meta http-equiv="refresh" content="10">
 </head>
 <body>
-    <h1><a href="/addpost">Go to AddPost</a></h1>
+
+    <div class="psc">
+        <a href="/posts/addpost">
+            <img class="post_creator" src="static\icon.png" alt="Создать пост">
     
+        </a>
+    </div>
     {% for i in range(0, col)%}
-    <li><h3><a href="{{ url_for('open_post', post_id=data[i]['id']) }}">{{ data[i]['title'] }}</a></h3></li>
+<a id="post_link" href="{{ url_for('open_post', post_id=data[i]['id']) }}"><div class="post_div">{{ data[i]['title'] }}</div></a>
+
     {% endfor %}
+
 </body>
 </html>
 

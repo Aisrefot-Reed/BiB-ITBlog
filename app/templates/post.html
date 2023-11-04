@@ -3,11 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/post.css') }}">
+    <!-- <link rel="stylesheet" type= "text/css" href= "post.css"> -->
     <title>{{ post['title'] }}</title>
+
 </head>
 <body>
-    <h3> {{ post['title'] }} </h3>
-    <p>{{ post['content'] }}</p>
+    <a class="gtp_link"  href="/posts"><div class="go_to_posts">Посты</div></a>
+<div class="post_form">
+    <!-- <p class="post_title">"Название поста все норм."</p>
+    <p class="post_text">Тут типа текст Дададададдаа ддададададдадададададададТут типа текст ДададададдааддададададдадададададададТут типа текст Дададададдаад дадад     ададдадададададададТут типа текст Дададададдааддададададдадададададад адТут типа текст ДададададдааддададададдадададададададТут типа текст ДададададдааддададададдадададададададТут типа текст Дададададдааддадад ададдадададададададТу т типа текст Дададададдаад дададададдадададададададТут типа текст ДададададдааддададададдадададададададТут типа текст Дададададдааддададададдадада. дадададад</p> -->
+
+    <p class="post_title"> {{ post['title'] }} </p>
+    <p class="post_text">{{ post['content'] }}</p>
+ 
+</div>
+
+
     
 </body>
 </html>
