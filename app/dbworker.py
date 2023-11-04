@@ -1,7 +1,7 @@
 import sqlite3
 import random
 
-database_file= "D:\\Programming\\languages\\PYTHON\\site-on-flask\\app\\database\\posts.db"
+database_file= "./app/database/posts.db"
 
 class DataBase():
     
@@ -12,6 +12,7 @@ class DataBase():
     post_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
     title   TEXT    NOT NULL,
     content TEXT    NOT NULL)""")
+        
     def get_all_posts():
         with sqlite3.connect(database_file) as conn:
             cursor = conn.cursor()
@@ -52,6 +53,6 @@ class DataBase():
 
 # # print(DataBase.opened_post(2))
 # # print(DataBase.get_all_posts(10))
-# DataBase.init_db()
+DataBase.init_db()
 
 
