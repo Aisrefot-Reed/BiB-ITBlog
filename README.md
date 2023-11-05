@@ -31,7 +31,7 @@ $ python main.py
 ![posts](img/img_3.jpg 'posts')
 ---
 
-![rp](img/img_2.png "Add post")
+![rp](img/img_2.jpg "Add post")
 ---
 
 ![reding](img/img_1.jpg "reading post")
