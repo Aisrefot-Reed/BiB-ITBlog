@@ -34,14 +34,15 @@ def add_post():
     if request.method=="POST":
         content = request.form.get("add_post_content")
         title = request.form.get("add_post_title")
-        if content is None or len(content)<=1500 or title<=120:
+        
+        if len(content)>=1500 or len(title) >=120:
             return redirect("/posts")
         else:
             DataBase.add_posts(title, content)
-        
-        return redirect("/posts")
-    d={'col':120, 'col1':1500}    # return render_template("PublicationDone.html")
-    return render_template("add_post.html",  d=d)
+            return redirect("/posts")  
+            # return render_template("PublicationDone.html")
+    return render_template("add_post.html")
+
 
 # app.add_url_rule('/', 'index', main_site)
 app.run(debug=True)

@@ -4,7 +4,10 @@ import random
 database_file= "./app/database/posts.db"
 
 class DataBase():
+    def __init__():
+        pass
     
+    @staticmethod
     def init_db():
         with sqlite3.connect(database_file) as conn:
             cursor = conn.cursor()
@@ -13,24 +16,26 @@ class DataBase():
     title   TEXT    NOT NULL,
     content TEXT    NOT NULL)""")
         
+    @staticmethod
     def get_all_posts():
         with sqlite3.connect(database_file) as conn:
             cursor = conn.cursor()
-        all_posts = cursor.execute("""SELECT * FROM Posts""").fetchall()
+            all_posts = cursor.execute("""SELECT * FROM Posts""").fetchall()
         #LIMIT 10 OFFFSET :numOfPosts * 10 - 1
         # print(all_posts)
-        s = []
-        for text in all_posts:
-            data = {}
-            
-            data['id'] = text[0]
-            data['title'] = text[1]
-            data['content'] = text[2]
+            s = []
+            for text in all_posts:
+                data = {}
+                
+                data['id'] = text[0]
+                data['title'] = text[1]
+                data['content'] = text[2]
 
-            s.append(data)
+                s.append(data)
 
-        return list(reversed(s))
+            return list(reversed(s))
         
+    @staticmethod
     def opened_post(post_id):
         conn = sqlite3.connect(database_file)
         cursor = conn.cursor()
@@ -42,6 +47,7 @@ class DataBase():
         conn.close()        
         return post_data
     
+    @staticmethod
     def add_posts(title, content):
         with sqlite3.connect(database_file) as conn:
             cursor = conn.cursor()
@@ -53,6 +59,6 @@ class DataBase():
 
 # # print(DataBase.opened_post(2))
 # # print(DataBase.get_all_posts(10))
-DataBase.init_db()
+# DataBase.init_db()
 
 
