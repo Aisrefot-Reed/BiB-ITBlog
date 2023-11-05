@@ -34,10 +34,14 @@ def add_post():
     if request.method=="POST":
         content = request.form.get("add_post_content")
         title = request.form.get("add_post_title")
-        
-        if len(content)>=1500 or len(title) >=120:
+        print(request.remote_addr)
+        if len(content)>=1500 or len(title) >=120 or len(content)==0:
+            print(content,title)
             return redirect("/posts")
         else:
+            print(len(content)==0)
+            print(type(len(content)))
+            print(title, content)
             DataBase.add_posts(title, content)
             return redirect("/posts")  
             # return render_template("PublicationDone.html")
@@ -45,5 +49,5 @@ def add_post():
 
 
 # app.add_url_rule('/', 'index', main_site)
-app.run(debug=True)
+app.run(debug=False)
 
